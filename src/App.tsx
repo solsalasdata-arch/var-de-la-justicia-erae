@@ -1,3 +1,15 @@
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Prologue from './components/Prologue'
+
 export default function App() {
-  return <main className="min-h-screen" />
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Prologue />
+      </main>
+    </>
+  )
 }
