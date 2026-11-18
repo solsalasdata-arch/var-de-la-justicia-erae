@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-night font-sans text-slate-300 antialiased;
+  }
+  ::selection {
+    @apply bg-pitch/30 text-white;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-800 bg-slate-850/70 backdrop-blur-sm;
+  }
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.25em];
+  }
+  .section-title {
+    @apply font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl;
+  }
+  .pitch-lines {
+    background-image:
+      linear-gradient(rgba(16, 185, 129, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 185, 129, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
