@@ -8,11 +8,12 @@ export default {
         slate: { 850: '#0F172A' },
         pitch: '#10B981',
         var: '#F59E0B',
-        alert: '#E11D48',
+        alert: { DEFAULT: '#E11D48', soft: '#FB7185' },
+        ink: '#0A0F1F',
       },
       fontFamily: {
         serif: ['"Fraunces"', 'Georgia', 'serif'],
-        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       keyframes: {

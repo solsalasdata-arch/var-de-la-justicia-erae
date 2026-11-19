@@ -1,4 +1,4 @@
-import { ArrowDown, Gavel, Scale, ShieldCheck } from 'lucide-react'
+import { ArrowDown, Gavel, ShieldCheck, Trophy } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -22,16 +22,17 @@ export default function Hero() {
       </svg>
 
       <div className="mx-auto max-w-5xl px-5 text-center">
-        <p className="mx-auto inline-flex max-w-full animate-rise items-center gap-2 rounded-full border border-var/40 bg-var/10 px-4 py-2 text-left text-xs font-medium text-var shadow-[0_0_30px_-10px] shadow-var/50 sm:text-sm">
+        <p className="mx-auto inline-flex max-w-full animate-rise items-center gap-2 rounded-full border border-var/40 bg-var/10 px-4 py-2 text-left text-xs font-medium text-var sm:text-sm">
+          <Trophy className="h-4 w-4 shrink-0" aria-hidden />
           <span>
-            <span aria-hidden>🏆 </span>1.<sup>er</sup> Premio Categoría Monografías · Congreso Internacional IA en la
+            1.<sup>er</sup> Premio Categoría Monografías · Congreso Internacional IA en la
             Justicia (Tucumán, Noviembre 2026)
           </span>
         </p>
 
         <h1 className="mt-8 animate-rise font-serif text-4xl font-bold leading-[1.05] tracking-tight text-white [animation-delay:80ms] sm:text-6xl lg:text-7xl">
           EL VAR DE LA JUSTICIA:
-          <span className="mt-3 block bg-gradient-to-r from-pitch via-emerald-300 to-var bg-clip-text font-semibold italic text-transparent">
+          <span className="mt-3 block font-semibold text-pitch">
             ¿Quién arbitra cuando el algoritmo decide?
           </span>
         </h1>
@@ -44,7 +45,7 @@ export default function Hero() {
         <div className="mt-10 flex animate-rise flex-col items-center justify-center gap-4 [animation-delay:240ms] sm:flex-row">
           <a
             href="#caso"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-pitch px-6 py-3.5 font-semibold text-night shadow-lg shadow-pitch/25 transition hover:bg-emerald-400 sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-pitch px-6 py-3.5 font-semibold text-night transition hover:bg-emerald-400 sm:w-auto"
           >
             <Gavel className="h-5 w-5" aria-hidden />
             Probar Sala VAR Jurídica (Caso Mateo)
@@ -58,28 +59,28 @@ export default function Hero() {
           </a>
         </div>
 
-        <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-3 text-left sm:grid-cols-3">
+        <dl
+          aria-label="Marcador del caso"
+          className="mx-auto mt-16 grid max-w-3xl grid-cols-1 divide-y divide-slate-800 overflow-hidden rounded-xl border border-slate-700 bg-ink text-left sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+        >
           {[
-            { k: 'Puntaje algorítmico', v: '0,89 / 1,00', c: 'text-alert', icon: Scale },
-            { k: 'Pruebas fácticas autónomas', v: '0', c: 'text-var', icon: Gavel },
-            { k: 'Decisión final', v: 'HUMANA', c: 'text-pitch', icon: ShieldCheck },
-          ].map(({ k, v, c, icon: Icon }) => (
-            <div key={k} className="card flex items-center gap-4 px-5 py-4">
-              <Icon className={`h-5 w-5 shrink-0 ${c}`} aria-hidden />
-              <div>
-                <dt className="text-xs uppercase tracking-wider text-slate-500">{k}</dt>
-                <dd className={`font-mono text-xl font-bold ${c}`}>{v}</dd>
-              </div>
+            { k: 'Puntaje algorítmico', v: '0,89 / 1,00', c: 'text-alert-soft' },
+            { k: 'Pruebas fácticas autónomas', v: '0', c: 'text-var' },
+            { k: 'Decisión final', v: 'Humana', c: 'text-pitch' },
+          ].map(({ k, v, c }) => (
+            <div key={k} className="flex flex-col-reverse gap-1 px-5 py-4">
+              <dt className="text-xs text-slate-400">{k}</dt>
+              <dd className={`font-mono text-2xl font-bold tabular-nums ${c}`}>{v}</dd>
             </div>
           ))}
         </dl>
 
         <a
           href="#prologo"
-          className="mt-14 inline-flex flex-col items-center gap-2 text-xs uppercase tracking-[0.25em] text-slate-500 hover:text-slate-300"
+          className="mt-14 inline-flex flex-col items-center gap-2 text-xs uppercase tracking-[0.25em] text-slate-400 hover:text-slate-300"
         >
           Comenzar el partido
-          <ArrowDown className="h-4 w-4 animate-bounce" aria-hidden />
+          <ArrowDown className="h-4 w-4" aria-hidden />
         </a>
       </div>
     </section>

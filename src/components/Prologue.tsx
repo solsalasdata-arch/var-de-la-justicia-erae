@@ -39,14 +39,12 @@ export default function Prologue() {
     <section id="prologo" className="relative border-t border-slate-800/60 py-24">
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeader
-          eyebrow="Prólogo · 2050"
           title={
             <>
-              El partido sin árbitro <span className="text-slate-500">vs.</span> la sala penal
+              El partido sin árbitro <span className="text-slate-400">vs.</span> la sala penal
             </>
           }
           intro="En la cancha, una jugada dudosa se detiene y se revisa. En el juzgado, una cifra aparece en la pantalla a las tres de la mañana y no hay repetición posible."
-          accent="var"
         />
 
         <div
@@ -89,8 +87,8 @@ export default function Prologue() {
             <div className="pitch-lines absolute inset-0 -z-10 opacity-60" />
             <header className="mb-6 flex items-center justify-between gap-4">
               <div>
-                <p className="eyebrow text-pitch">En la cancha</p>
-                <h3 className="mt-1 font-serif text-2xl font-semibold text-white">Minuto 90 · Año 2050</h3>
+                <h3 className="font-serif text-2xl font-semibold text-white">En la Cancha</h3>
+                <p className="mt-1 text-sm text-pitch">Minuto 90 · Año 2050</p>
               </div>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-pitch/40 bg-pitch/10 px-3 py-1 font-mono text-xs font-semibold text-pitch">
                 <Clock className="h-3.5 w-3.5" aria-hidden /> 90:00
@@ -116,11 +114,11 @@ export default function Prologue() {
               <span className="absolute left-[74%] top-[49%] h-2 w-2 rounded-full bg-white shadow" />
               {step === 2 && (
                 <>
-                  <div className="absolute inset-y-0 left-[70.5%] w-px bg-var/80 shadow-[0_0_8px] shadow-var" />
+                  <div className="absolute inset-y-0 left-[70.5%] w-px bg-var/80" />
                   <div className="absolute inset-x-0 h-1/3 animate-scan bg-gradient-to-b from-transparent via-var/10 to-transparent" />
                 </>
               )}
-              <div className="absolute left-3 top-3 flex items-center gap-2 rounded-md bg-black/50 px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-white/80">
+              <div className="absolute left-3 top-3 flex items-center gap-2 rounded-md bg-black/50 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-white/80">
                 {step === 2 ? (
                   <>
                     <Tv className="h-3 w-3 text-var" aria-hidden /> REPLAY · {angles[angle]} · 0.25x
@@ -136,7 +134,7 @@ export default function Prologue() {
                 )}
               </div>
               {step >= 1 && step < 3 && (
-                <div className="absolute bottom-3 right-3 rounded-md border border-var/60 bg-var/20 px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-var">
+                <div className="absolute bottom-3 right-3 rounded-md border border-var/60 bg-var/20 px-2 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-var">
                   VAR · Revisión en curso
                 </div>
               )}
@@ -150,13 +148,13 @@ export default function Prologue() {
                     i === step
                       ? 'border-pitch/50 bg-pitch/10'
                       : i < step
-                        ? 'border-slate-800 opacity-70'
-                        : 'border-slate-800/60 opacity-40'
+                        ? 'border-slate-800'
+                        : 'border-dashed border-slate-800'
                   }`}
                 >
-                  <Icon className={`mt-0.5 h-5 w-5 shrink-0 ${i <= step ? 'text-pitch' : 'text-slate-500'}`} aria-hidden />
+                  <Icon className={`mt-0.5 h-5 w-5 shrink-0 ${i <= step ? 'text-pitch' : 'text-slate-400'}`} aria-hidden />
                   <div>
-                    <p className="text-sm font-semibold text-white">{title}</p>
+                    <p className={`text-sm font-semibold ${i <= step ? 'text-white' : 'text-slate-300'}`}>{title}</p>
                     <p className="text-sm text-slate-400">{text}</p>
                   </div>
                 </li>
@@ -191,16 +189,16 @@ export default function Prologue() {
           >
             <header className="mb-6 flex items-center justify-between gap-4">
               <div>
-                <p className="eyebrow text-alert">En el juzgado</p>
-                <h3 className="mt-1 font-serif text-2xl font-semibold text-white">03:00 AM · Sala penal</h3>
+                <h3 className="font-serif text-2xl font-semibold text-white">En el Juzgado</h3>
+                <p className="mt-1 text-sm text-alert-soft">03:00 AM · Sala penal</p>
               </div>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-alert/40 bg-alert/10 px-3 py-1 font-mono text-xs font-semibold text-alert">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-alert/40 bg-alert/10 px-3 py-1 font-mono text-xs font-semibold text-alert-soft">
                 <Clock className="h-3.5 w-3.5" aria-hidden /> 03:00
               </span>
             </header>
 
-            <div className="relative mb-6 overflow-hidden rounded-xl border border-alert/40 bg-[#0a0f1f] p-5 shadow-[inset_0_0_60px_-20px] shadow-alert/40">
-              <div className="mb-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-wider text-slate-500">
+            <div className="relative mb-6 overflow-hidden rounded-xl border border-alert/40 bg-ink p-5 shadow-[inset_0_0_60px_-20px] shadow-alert/40">
+              <div className="mb-4 flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-slate-400">
                 <span>RISK-ASSESS v?.?</span>
                 <span className="flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 animate-blink rounded-full bg-alert" /> procesando
@@ -217,11 +215,11 @@ export default function Prologue() {
               </div>
               <div className="mt-5 border-t border-slate-800 pt-4 text-center">
                 <p className="animate-blink font-mono text-3xl font-bold text-alert sm:text-4xl">0,89 / 1,00</p>
-                <p className="mt-1 font-mono text-sm font-semibold tracking-[0.3em] text-alert">— RIESGO ELEVADO</p>
+                <p className="mt-1 font-mono text-sm font-semibold tracking-[0.3em] text-alert-soft">— RIESGO ELEVADO</p>
               </div>
             </div>
 
-            <ul className="space-y-3">
+            <ul className="divide-y divide-slate-800 border-y border-slate-800">
               {[
                 ['Repetición en cámara lenta', 'No disponible'],
                 ['Explicación de variables', 'Sin datos'],
@@ -230,10 +228,10 @@ export default function Prologue() {
               ].map(([k, v]) => (
                 <li
                   key={k}
-                  className="flex items-center justify-between gap-3 rounded-xl border border-slate-800 bg-night/50 px-4 py-3"
+                  className="flex items-center justify-between gap-3 py-3"
                 >
                   <span className="text-sm text-slate-300">{k}</span>
-                  <span className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold uppercase text-alert">
+                  <span className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold uppercase text-alert-soft">
                     <AlertTriangle className="h-3.5 w-3.5" aria-hidden /> {v}
                   </span>
                 </li>

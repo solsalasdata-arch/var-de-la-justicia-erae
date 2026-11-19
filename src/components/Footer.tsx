@@ -11,7 +11,7 @@ export default function Footer() {
           <p className="mt-3 font-serif text-xl italic text-slate-300">
             La inteligencia artificial puede ser asistente de línea. <span className="text-var">Nunca árbitro.</span>
           </p>
-          <p className="mt-4 text-xs leading-relaxed text-slate-500">
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">
             Churquina, G. S. (2026). <em>El VAR de la Justicia: Inteligencia artificial, evaluación de riesgo y el Estándar
             de Revisabilidad Algorítmica Efectiva (ERAE) en el proceso penal</em>. Eje 1: IA y Derecho Penal. Colaboración
             técnica: Lic. Sol Brenda Salas. El caso Mateo es hipotético y tiene fines académicos.
