@@ -19,9 +19,9 @@ El proyecto cruza **Derecho Penal** e **Inteligencia Artificial / Ciencia de Dat
 
 | Sección | Contenido |
 | --- | --- |
-| `#inicio` | Hero editorial con el reconocimiento del Congreso y accesos directos al simulador y al estándar. |
+| `#inicio` | Hero tipo marcador LED de estadio: **ALGORITMO 0,89 vs ERAE**, con las tres dimensiones del estándar, el reconocimiento del Congreso y accesos al estándar y al caso. |
 | `#prologo` | *2050: El partido sin árbitro* vs. la sala penal a las 03:00 AM: repetición VAR paso a paso frente a un monitor que parpadea `0,89 / 1,00 — RIESGO ELEVADO` sin explicación posible. |
-| `#caso` | **Caso Mateo** y simulador **Sala VAR Jurídica** en 3 pasos: (1) auditoría técnica que abre la caja negra (registro erróneo, variables proxy, falta de validación local); (2) **prueba de sustracción argumental** con interruptor real; (3) resolución judicial humana fundada en el principio de inocencia y el derecho penal de acto. |
+| `#caso` | **Caso Mateo** narrado minuto a minuto en la **Sala VAR Jurídica**, con marcador en vivo y controles para pausar, adelantar o ver todo: alerta algorítmica, pedido de prisión preventiva, auditoría técnica que abre la caja negra (registro erróneo, variables proxy, falta de validación local), **prueba de sustracción argumental** con interruptor real y resolución judicial humana fundada en el principio de inocencia y el derecho penal de acto. |
 | `#erae` | Las tres dimensiones inseparables del **ERAE** (revisabilidad técnica, procesal y judicial) con checklist interactivo, la regla procesal propuesta y un panel de jurisprudencia comparada y normativa argentina. |
 | `#autoras` | Autoría, colaboración interdisciplinaria y fallo oficial del Comité Evaluador. |
 
@@ -54,7 +54,7 @@ Importar el repositorio en Vercel: el preset **Vite** se detecta automáticament
 
 ```
 src/
-├── components/   Navbar, Hero, Prologue, CaseSimulator, Erae, Authors, Footer
+├── components/   Navbar, Hero, Prologue, CaseRelato, Erae, Chapter, Authors, Footer
 ├── data/         caso.ts (Mateo y desglose del puntaje) · erae.ts (pilares, precedentes, normas)
 └── index.css     capa de Tailwind y utilidades del tema
 ```
@@ -64,4 +64,4 @@ src/
 - **Galilea Selena Churquina** — Autora de la monografía. Estudiante avanzada de Abogacía, Universidad Católica de Salta (UCASAL), Jujuy, Argentina · degalilea03@gmail.com
 - **Lic. Sol Brenda Salas** — Colaboración técnica en IA y Ciencia de Datos. Licenciada en Ciencia de Datos (UCASAL), especialista en Inteligencia Artificial, Visión por Computadora y auditoría algorítmica.
 
-> El caso Mateo es hipotético y tiene fines académicos. El desglose del puntaje y la resolución del simulador son ilustrativos.
+> El caso Mateo es hipotético y tiene fines académicos. El desglose del puntaje y la resolución del relato son ilustrativos.

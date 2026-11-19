@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Prologue from './components/Prologue'
-import CaseSimulator from './components/CaseSimulator'
+import CaseRelato from './components/CaseRelato'
 import Erae from './components/Erae'
 import Authors from './components/Authors'
 import Footer from './components/Footer'
@@ -13,7 +13,7 @@ export default function App() {
       <main>
         <Hero />
         <Prologue />
-        <CaseSimulator />
+        <CaseRelato />
         <Erae />
         <Authors />
       </main>

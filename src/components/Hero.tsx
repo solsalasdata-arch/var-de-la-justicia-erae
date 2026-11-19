@@ -1,87 +1,80 @@
-import { ArrowDown, Gavel, ShieldCheck, Trophy } from 'lucide-react'
+import { Radio, ShieldCheck, Trophy } from 'lucide-react'
+import { pillars } from '../data/erae'
+
+const panelTone = {
+  pitch: 'bg-pitch text-night',
+  var: 'bg-var text-night',
+  alert: 'bg-alert text-white',
+}
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative isolate overflow-hidden pb-24 pt-32 sm:pt-40">
-      <div className="pitch-lines absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
-      <div className="absolute left-1/2 top-24 -z-10 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-pitch/10 blur-3xl" />
-      <div className="absolute -right-24 top-64 -z-10 h-72 w-72 rounded-full bg-var/10 blur-3xl" />
-      <div className="absolute -left-24 top-96 -z-10 h-72 w-72 rounded-full bg-alert/10 blur-3xl" />
-
-      {/* Centre circle of the pitch */}
-      <svg
-        aria-hidden
-        className="absolute left-1/2 top-1/2 -z-10 h-[38rem] w-[38rem] -translate-x-1/2 -translate-y-1/2 text-pitch/10"
-        viewBox="0 0 200 200"
-        fill="none"
-        stroke="currentColor"
-      >
-        <circle cx="100" cy="100" r="60" strokeWidth="0.6" />
-        <circle cx="100" cy="100" r="1.6" fill="currentColor" />
-        <line x1="100" y1="0" x2="100" y2="200" strokeWidth="0.6" />
-      </svg>
-
-      <div className="mx-auto max-w-5xl px-5 text-center">
-        <p className="mx-auto inline-flex max-w-full animate-rise items-center gap-2 rounded-full border border-var/40 bg-var/10 px-4 py-2 text-left text-xs font-medium text-var sm:text-sm">
-          <Trophy className="h-4 w-4 shrink-0" aria-hidden />
-          <span>
-            1.<sup>er</sup> Premio Categoría Monografías · Congreso Internacional IA en la
-            Justicia (Tucumán, Noviembre 2026)
-          </span>
-        </p>
-
-        <h1 className="mt-8 animate-rise font-serif text-4xl font-bold leading-[1.05] tracking-tight text-white [animation-delay:80ms] sm:text-6xl lg:text-7xl">
-          EL VAR DE LA JUSTICIA:
-          <span className="mt-3 block font-semibold text-pitch">
-            ¿Quién arbitra cuando el algoritmo decide?
-          </span>
+    <section id="inicio" className="tv-floodlights relative overflow-hidden pb-20 pt-24 sm:pt-28">
+      <div className="mx-auto max-w-6xl px-5">
+        <h1 className="tv-rise text-center font-serif text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          EL VAR DE LA JUSTICIA:{' '}
+          <span className="font-semibold text-slate-200">¿Quién arbitra cuando el algoritmo decide?</span>
         </h1>
-
-        <p className="mx-auto mt-8 max-w-2xl animate-rise text-lg italic leading-relaxed text-slate-400 [animation-delay:160ms] sm:text-xl">
+        <p className="tv-rise mx-auto mt-5 max-w-2xl text-center text-lg leading-relaxed text-slate-300 [animation-delay:80ms]">
           Inteligencia artificial, evaluación de riesgo y el Estándar de Revisabilidad Algorítmica Efectiva (ERAE) en el
           proceso penal.
         </p>
 
-        <div className="mt-10 flex animate-rise flex-col items-center justify-center gap-4 [animation-delay:240ms] sm:flex-row">
-          <a
-            href="#caso"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-pitch px-6 py-3.5 font-semibold text-night transition hover:bg-emerald-400 sm:w-auto"
-          >
-            <Gavel className="h-5 w-5" aria-hidden />
-            Probar Sala VAR Jurídica (Caso Mateo)
-          </a>
-          <a
-            href="#erae"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-850/70 px-6 py-3.5 font-semibold text-white transition hover:border-var/60 hover:text-var sm:w-auto"
-          >
-            <ShieldCheck className="h-5 w-5" aria-hidden />
-            Explorar el Estándar ERAE
-          </a>
+        <div
+          role="group"
+          aria-label="Marcador: algoritmo contra ERAE"
+          className="tv-led tv-flash mt-10 overflow-hidden rounded-2xl border-4 border-slate-800 shadow-[0_24px_60px_rgba(0,0,0,0.6)] [animation-delay:200ms]"
+        >
+          <p className="flex items-center gap-2 bg-night px-5 py-2 text-sm font-semibold text-var sm:text-base">
+            <Trophy className="h-4 w-4 shrink-0" aria-hidden />
+            <span>
+              1.<sup>er</sup> Premio Categoría Monografías · Congreso Internacional IA en la Justicia (Tucumán, Noviembre
+              2026)
+            </span>
+          </p>
+
+          <div className="grid items-center gap-6 px-5 py-8 sm:px-10 md:grid-cols-[1fr_auto_1fr]">
+            <div className="text-center md:text-right">
+              <p className="font-tv text-2xl font-bold uppercase tracking-[0.15em] text-slate-400">Algoritmo</p>
+              <p className="font-mono text-6xl font-bold tabular-nums text-alert-soft sm:text-7xl">0,89</p>
+              <p className="font-tv text-lg uppercase tracking-wider text-slate-400">Riesgo sin explicar</p>
+            </div>
+            <p className="font-tv text-center text-3xl font-bold uppercase text-slate-400">vs</p>
+            <div className="text-center md:text-left">
+              <p className="font-tv text-2xl font-bold uppercase tracking-[0.15em] text-slate-400">Proceso penal</p>
+              <p className="font-tv text-7xl font-extrabold leading-none text-pitch sm:text-8xl">ERAE</p>
+              <p className="font-tv text-lg uppercase tracking-wider text-slate-300">Revisión antes de decidir</p>
+            </div>
+          </div>
+
+          <p className="font-tv border-y border-slate-800 bg-night/80 px-5 py-3 text-center text-xl font-bold uppercase tracking-wide text-white sm:text-2xl">
+            Estándar de Revisabilidad Algorítmica Efectiva
+          </p>
+
+          <div className="grid sm:grid-cols-3">
+            {pillars.map((p, i) => (
+              <div key={p.id} className={`tv-rise px-5 py-4 ${panelTone[p.color]}`} style={{ animationDelay: `${700 + i * 90}ms` }}>
+                <p className="font-tv text-2xl font-extrabold uppercase tracking-wide">{p.title.replace('Revisabilidad ', '')}</p>
+                <p className="text-sm font-medium">{p.tagline}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <dl
-          aria-label="Marcador del caso"
-          className="mx-auto mt-16 grid max-w-3xl grid-cols-1 divide-y divide-slate-800 overflow-hidden rounded-xl border border-slate-700 bg-ink text-left sm:grid-cols-3 sm:divide-x sm:divide-y-0"
-        >
-          {[
-            { k: 'Puntaje algorítmico', v: '0,89 / 1,00', c: 'text-alert-soft' },
-            { k: 'Pruebas fácticas autónomas', v: '0', c: 'text-var' },
-            { k: 'Decisión final', v: 'Humana', c: 'text-pitch' },
-          ].map(({ k, v, c }) => (
-            <div key={k} className="flex flex-col-reverse gap-1 px-5 py-4">
-              <dt className="text-xs text-slate-400">{k}</dt>
-              <dd className={`font-mono text-2xl font-bold tabular-nums ${c}`}>{v}</dd>
-            </div>
-          ))}
-        </dl>
-
-        <a
-          href="#prologo"
-          className="mt-14 inline-flex flex-col items-center gap-2 text-xs uppercase tracking-[0.25em] text-slate-400 hover:text-slate-300"
-        >
-          Comenzar el partido
-          <ArrowDown className="h-4 w-4" aria-hidden />
-        </a>
+        <div className="tv-rise mt-8 flex flex-col items-center justify-center gap-3 [animation-delay:1000ms] sm:flex-row">
+          <a
+            href="#erae"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-pitch px-6 py-3.5 font-semibold text-night transition-colors hover:bg-emerald-400 sm:w-auto"
+          >
+            <ShieldCheck className="h-5 w-5" aria-hidden /> Explorar el Estándar ERAE
+          </a>
+          <a
+            href="#caso"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-slate-600 px-6 py-3.5 font-semibold text-white transition-colors hover:border-var hover:text-var sm:w-auto"
+          >
+            <Radio className="h-5 w-5" aria-hidden /> Seguir el caso Mateo en vivo
+          </a>
+        </div>
       </div>
     </section>
   )

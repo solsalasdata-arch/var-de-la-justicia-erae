@@ -6,6 +6,7 @@ export type Pillar = {
   title: string
   icon: LucideIcon
   color: 'pitch' | 'var' | 'alert'
+  tagline: string
   summary: string
   checks: string[]
   question: string
@@ -17,6 +18,7 @@ export const pillars: Pillar[] = [
     title: 'Revisabilidad Técnica',
     icon: Cpu,
     color: 'pitch',
+    tagline: 'Herramienta, versión, datos, validación y márgenes de error.',
     summary:
       'Debe ser posible saber qué herramienta se usó y bajo qué condiciones produjo el resultado: qué significa el puntaje y qué no permite concluir.',
     checks: [
@@ -33,6 +35,7 @@ export const pillars: Pillar[] = [
     title: 'Revisabilidad Procesal',
     icon: Users,
     color: 'var',
+    tagline: 'Contradicción real de la defensa y pericias independientes.',
     summary:
       'La parte afectada debe tener una oportunidad real, no formal, de cuestionar los datos y la metodología antes de que se decida.',
     checks: [
@@ -49,6 +52,7 @@ export const pillars: Pillar[] = [
     title: 'Revisabilidad Judicial',
     icon: Landmark,
     color: 'alert',
+    tagline: 'Motivación propia: el juez no delega en la predicción.',
     summary:
       'El juez valora de forma independiente la relevancia y confiabilidad del resultado. La responsabilidad no se desplaza al proveedor ni al operador.',
     checks: [

@@ -8,6 +8,8 @@ export default function Authors() {
     <section id="autoras" className="relative border-t border-slate-800/60 py-24">
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeader
+          chapter="Ficha técnica"
+          tone="var"
           title="Derecho penal y ciencia de datos, en la misma cancha"
           intro="Una monografía jurídica que cruzó la frontera de su disciplina para desentrañar la opacidad de los algoritmos."
         />
@@ -54,7 +56,7 @@ export default function Authors() {
           </article>
         </div>
 
-        <article className="relative mt-6 overflow-hidden rounded-2xl border border-var/40 bg-gradient-to-br from-var/15 via-slate-850 to-night p-6 sm:p-10">
+        <article className="tv-led relative mt-6 overflow-hidden rounded-2xl border-4 border-slate-800 p-6 sm:p-10">
           <Trophy className="absolute -bottom-6 -right-6 h-48 w-48 text-var/10" aria-hidden />
           <div className="relative">
             <div>

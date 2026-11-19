@@ -39,6 +39,8 @@ export default function Prologue() {
     <section id="prologo" className="relative border-t border-slate-800/60 py-24">
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeader
+          chapter="Previa"
+          tone="var"
           title={
             <>
               El partido sin árbitro <span className="text-slate-400">vs.</span> la sala penal

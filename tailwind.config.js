@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         serif: ['"Fraunces"', 'Georgia', 'serif'],
         sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        tv: ['"Barlow Condensed"', '"IBM Plex Sans"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       keyframes: {
