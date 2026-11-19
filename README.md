@@ -5,6 +5,8 @@
 > Congreso Internacional *“Inteligencia Artificial en la Justicia: Innovación y Justicia”* · Tucumán, Argentina · 12-13 de noviembre de 2026.
 > Comité Evaluador: José Ignacio Pastores, Adolfo Iriarte Yanicelli y Ana María Basualdo.
 
+**🔗 Sitio en vivo:** https://solsalasdata-arch.github.io/var-de-la-justicia-erae/
+
 Landing page interactiva que traduce a una experiencia web la monografía *El VAR de la Justicia: Inteligencia artificial, evaluación de riesgo y el Estándar de Revisabilidad Algorítmica Efectiva (ERAE) en el proceso penal*.
 
 El proyecto cruza **Derecho Penal** e **Inteligencia Artificial / Ciencia de Datos**: toma la metáfora del VAR futbolístico para mostrar por qué un puntaje algorítmico de “riesgo” no puede fundar, por sí solo, una restricción de la libertad, y cómo auditarlo antes de decidir.
