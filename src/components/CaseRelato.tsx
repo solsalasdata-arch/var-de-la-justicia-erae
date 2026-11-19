@@ -40,7 +40,7 @@ const plays: MatchPlay[] = [
 
 const chip: Record<Tone, string> = {
   pitch: 'bg-pitch text-night',
-  var: 'bg-var text-night',
+  var: 'bg-var text-white',
   alert: 'bg-alert text-white',
   slate: 'bg-slate-200 text-night',
 }
@@ -176,12 +176,12 @@ export default function CaseRelato() {
               {f.kind === 'erroneo' ? (
                 <AlertOctagon className="mt-0.5 h-4 w-4 shrink-0 text-alert-soft" aria-hidden />
               ) : (
-                <HelpCircle className="mt-0.5 h-4 w-4 shrink-0 text-var" aria-hidden />
+                <HelpCircle className="mt-0.5 h-4 w-4 shrink-0 text-var-soft" aria-hidden />
               )}
               <div className="flex-1">
                 <p className="text-sm font-semibold text-white">
                   {f.label}{' '}
-                  <span className={`font-tv ml-1 rounded-sm px-1.5 py-0.5 text-xs font-bold uppercase ${f.kind === 'erroneo' ? 'bg-alert text-white' : 'bg-var text-night'}`}>
+                  <span className={`font-tv ml-1 rounded-sm px-1.5 py-0.5 text-xs font-bold uppercase ${f.kind === 'erroneo' ? 'bg-alert text-white' : 'bg-var text-white'}`}>
                     {f.kind === 'erroneo' ? 'Dato erróneo' : 'Variable proxy'}
                   </span>
                 </p>
@@ -286,7 +286,7 @@ export default function CaseRelato() {
           aria-expanded={fullRes}
           aria-controls="resolucion-completa"
           onClick={() => setFullRes((v) => !v)}
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-pitch hover:text-emerald-300"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-pitch hover:text-pitch-soft"
         >
           {fullRes ? 'Ocultar fundamentos' : 'Leer los fundamentos de la resolución'}
           <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${fullRes ? 'rotate-180' : ''}`} aria-hidden />
@@ -421,7 +421,7 @@ export default function CaseRelato() {
                   className={`h-full rounded-full transition-[width] duration-700 ease-out ${subtracted ? 'bg-alert' : 'bg-var'}`}
                 />
               </div>
-              <p className={`mt-2 text-sm font-semibold ${!requested ? 'text-slate-400' : subtracted ? 'text-alert-soft' : 'text-var'}`}>
+              <p className={`mt-2 text-sm font-semibold ${!requested ? 'text-slate-400' : subtracted ? 'text-alert-soft' : 'text-var-soft'}`}>
                 {verdict}
               </p>
             </div>
@@ -441,7 +441,7 @@ export default function CaseRelato() {
                 <button
                   type="button"
                   onClick={next}
-                  className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-slate-600 px-4 text-sm font-semibold text-white hover:border-var hover:text-var"
+                  className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-slate-600 px-4 text-sm font-semibold text-white hover:border-var hover:text-var-soft"
                 >
                   <SkipForward className="h-4 w-4" aria-hidden /> Siguiente jugada
                 </button>

@@ -4,12 +4,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        night: '#070B14',
-        slate: { 850: '#0F172A' },
-        pitch: '#10B981',
-        var: '#F59E0B',
-        alert: { DEFAULT: '#E11D48', soft: '#FB7185' },
-        ink: '#0A0F1F',
+        night: '#101A14',
+        evergreen: '#203627',
+        graphite: '#3D3D3D',
+        mist: '#EFEFEF',
+        white: '#EFEFEF',
+        slate: {
+          100: '#EFEFEF',
+          200: '#E1E4E0',
+          300: '#C8CEC8',
+          400: '#A1ACA3',
+          500: '#76827A',
+          600: '#556158',
+          700: '#3D4A41',
+          800: '#2A3A2F',
+          850: '#182A1F',
+          900: '#14221A',
+        },
+        pitch: { DEFAULT: '#E8FF40', soft: '#F1FF85' },
+        var: { DEFAULT: '#0250B0', soft: '#6EA6F2' },
+        alert: { DEFAULT: '#C8102E', soft: '#FB7185' },
+        ink: '#0B130E',
       },
       fontFamily: {
         serif: ['"Fraunces"', 'Georgia', 'serif'],

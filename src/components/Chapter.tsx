@@ -26,7 +26,7 @@ export default function Chapter({ title, meta, defaultOpen = false, children }: 
             <span className="block text-sm text-slate-400">{meta}</span>
           </span>
           <ChevronDown
-            className={`h-6 w-6 shrink-0 text-var transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+            className={`h-6 w-6 shrink-0 text-var-soft transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
             aria-hidden
           />
         </button>

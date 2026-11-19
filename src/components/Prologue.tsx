@@ -97,7 +97,7 @@ export default function Prologue() {
               </span>
             </header>
 
-            <div className="relative mb-6 aspect-video overflow-hidden rounded-xl border border-pitch/30 bg-gradient-to-b from-emerald-950 to-emerald-900/60">
+            <div className="relative mb-6 aspect-video overflow-hidden rounded-xl border border-pitch/30 bg-gradient-to-b from-evergreen to-night">
               <svg viewBox="0 0 320 180" className="absolute inset-0 h-full w-full text-white/25" aria-hidden>
                 <rect x="6" y="6" width="308" height="168" fill="none" stroke="currentColor" strokeWidth="1.2" />
                 <rect x="226" y="40" width="88" height="100" fill="none" stroke="currentColor" strokeWidth="1.2" />
@@ -107,9 +107,9 @@ export default function Prologue() {
                 <circle cx="160" cy="90" r="26" fill="none" stroke="currentColor" strokeWidth="1.2" />
               </svg>
               {/* players */}
-              <span className="absolute left-[68%] top-[46%] h-3 w-3 rounded-full bg-sky-400 shadow" />
+              <span className="absolute left-[68%] top-[46%] h-3 w-3 rounded-full bg-var-soft shadow" />
               <span
-                className={`absolute h-3 w-3 rounded-full bg-rose-400 shadow transition-all duration-700 ${
+                className={`absolute h-3 w-3 rounded-full bg-alert-soft shadow transition-all duration-700 ${
                   step >= 1 ? 'left-[71%] top-[52%]' : 'left-[72%] top-[44%]'
                 }`}
               />
@@ -123,7 +123,7 @@ export default function Prologue() {
               <div className="absolute left-3 top-3 flex items-center gap-2 rounded-md bg-black/50 px-2 py-1 font-mono text-[11px] uppercase tracking-wider text-white/80">
                 {step === 2 ? (
                   <>
-                    <Tv className="h-3 w-3 text-var" aria-hidden /> REPLAY · {angles[angle]} · 0.25x
+                    <Tv className="h-3 w-3 text-var-soft" aria-hidden /> REPLAY · {angles[angle]} · 0.25x
                   </>
                 ) : step === 3 ? (
                   <>
@@ -136,7 +136,7 @@ export default function Prologue() {
                 )}
               </div>
               {step >= 1 && step < 3 && (
-                <div className="absolute bottom-3 right-3 rounded-md border border-var/60 bg-var/20 px-2 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-var">
+                <div className="absolute bottom-3 right-3 rounded-md border border-var/60 bg-var/20 px-2 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-var-soft">
                   VAR · Revisión en curso
                 </div>
               )}
@@ -167,7 +167,7 @@ export default function Prologue() {
               {!finished ? (
                 <button
                   onClick={advance}
-                  className="inline-flex items-center gap-2 rounded-lg bg-pitch px-4 py-2 text-sm font-semibold text-night hover:bg-emerald-400"
+                  className="inline-flex items-center gap-2 rounded-lg bg-pitch px-4 py-2 text-sm font-semibold text-night hover:bg-pitch-soft"
                 >
                   <Eye className="h-4 w-4" aria-hidden />
                   {step === 2 && angle < angles.length - 1 ? 'Ver otro ángulo' : 'Revisar la jugada'}
@@ -251,7 +251,7 @@ export default function Prologue() {
           <Quote className="absolute -left-2 -top-2 h-24 w-24 text-var/10" aria-hidden />
           <blockquote className="relative font-serif text-2xl italic leading-snug text-white sm:text-3xl">
             “Una cifra puede expresar una probabilidad, pero nunca debe confundirse con una sentencia. La inteligencia
-            artificial puede ser asistente de línea. <span className="not-italic text-var">Nunca árbitro.</span>”
+            artificial puede ser asistente de línea. <span className="not-italic text-var-soft">Nunca árbitro.</span>”
           </blockquote>
           <figcaption className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-slate-400">
             — El VAR de la Justicia · Galilea Selena Churquina

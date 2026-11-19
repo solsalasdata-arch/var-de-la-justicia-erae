@@ -9,7 +9,7 @@ type Props = {
 
 const toneClass = {
   pitch: 'bg-pitch text-night',
-  var: 'bg-var text-night',
+  var: 'bg-var text-white',
   alert: 'bg-alert text-white',
 }
 

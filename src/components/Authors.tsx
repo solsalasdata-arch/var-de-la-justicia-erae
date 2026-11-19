@@ -38,7 +38,7 @@ export default function Authors() {
 
           <article className="card relative overflow-hidden p-6 sm:p-8">
             <h3 className="font-serif text-3xl font-semibold text-white">Lic. Sol Brenda Salas</h3>
-            <p className="mt-1 text-sm font-semibold text-sky-400">Colaboración técnica en IA y Ciencia de Datos</p>
+            <p className="mt-1 text-sm font-semibold text-var-soft">Colaboración técnica en IA y Ciencia de Datos</p>
             <ul className="mt-5 space-y-2.5 text-sm text-slate-300">
               <li className="flex gap-2.5">
                 <GraduationCap className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" aria-hidden />
@@ -49,7 +49,7 @@ export default function Authors() {
                 Especialista en Inteligencia Artificial, Visión por Computadora y auditoría algorítmica
               </li>
             </ul>
-            <p className="mt-5 border-l-2 border-sky-500/40 pl-4 font-serif text-sm italic leading-relaxed text-slate-400">
+            <p className="mt-5 border-l-2 border-var/60 pl-4 font-serif text-sm italic leading-relaxed text-slate-400">
               “Tu agudeza técnica en inteligencia artificial y tu mirada fueron indispensables para desentrañar la
               opacidad de los algoritmos.” — Agradecimientos de la monografía
             </p>
@@ -63,10 +63,10 @@ export default function Authors() {
               <h3 className="font-serif text-3xl font-bold text-white sm:text-4xl">
                 1.<sup>er</sup> Premio · Categoría Monografías
               </h3>
-              <p className="mt-1 text-sm font-semibold text-var">Fallo oficial del Comité Evaluador</p>
+              <p className="mt-1 text-sm font-semibold text-var-soft">Fallo oficial del Comité Evaluador</p>
               <p className="mt-3 max-w-2xl leading-relaxed text-slate-300">
                 Congreso Internacional <em>“Inteligencia Artificial en la Justicia: Innovación y Justicia”</em> ·
-                Tucumán, Argentina · <span className="font-mono text-var">12–13 de noviembre de 2026</span>
+                Tucumán, Argentina · <span className="font-mono text-var-soft">12–13 de noviembre de 2026</span>
               </p>
               <div className="mt-6">
                 <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-slate-400">Comité evaluador</p>

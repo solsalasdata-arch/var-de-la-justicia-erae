@@ -6,7 +6,7 @@ import { norms, pillars, precedents } from '../data/erae'
 
 const tone = {
   pitch: { text: 'text-pitch', border: 'border-pitch', soft: 'border-pitch/50 bg-pitch/10', band: 'bg-pitch text-night', solid: 'bg-pitch' },
-  var: { text: 'text-var', border: 'border-var', soft: 'border-var/50 bg-var/10', band: 'bg-var text-night', solid: 'bg-var' },
+  var: { text: 'text-var-soft', border: 'border-var', soft: 'border-var/50 bg-var/10', band: 'bg-var text-white', solid: 'bg-var' },
   alert: { text: 'text-alert-soft', border: 'border-alert', soft: 'border-alert/50 bg-alert/10', band: 'bg-alert text-white', solid: 'bg-alert' },
 }
 
@@ -132,14 +132,14 @@ export default function Erae() {
                 <RotateCcw className="h-3.5 w-3.5" aria-hidden /> Reiniciar
               </button>
             )}
-            <span className={`font-mono text-3xl font-bold tabular-nums ${complete ? 'text-pitch' : 'text-var'}`}>
+            <span className={`font-mono text-3xl font-bold tabular-nums ${complete ? 'text-pitch' : 'text-var-soft'}`}>
               {doneChecks}/{totalChecks}
             </span>
           </div>
         </div>
 
         <figure className="mt-12 overflow-hidden rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
-          <figcaption className="font-tv flex items-center gap-2 bg-var px-5 py-2 text-lg font-extrabold uppercase tracking-wide text-night">
+          <figcaption className="font-tv flex items-center gap-2 bg-var px-5 py-2 text-lg font-extrabold uppercase tracking-wide text-white">
             <BookOpen className="h-5 w-5" aria-hidden /> Propuesta normativa
           </figcaption>
           <blockquote className="bg-white px-5 py-6 font-serif text-lg leading-relaxed text-night sm:px-8 sm:text-xl">
@@ -171,7 +171,7 @@ export default function Erae() {
                         <span className="block font-serif text-base font-semibold italic text-white">{p.name}</span>
                         <span className="block text-xs text-slate-400">{p.court}</span>
                       </span>
-                      <span className="font-mono shrink-0 rounded-sm bg-var px-2 py-0.5 text-xs font-bold text-night">{p.year}</span>
+                      <span className="font-mono shrink-0 rounded-sm bg-var px-2 py-0.5 text-xs font-bold text-white">{p.year}</span>
                     </button>
                   </li>
                 ))}
@@ -179,7 +179,7 @@ export default function Erae() {
 
               <article key={selected.id} className="tv-rise h-fit rounded-lg bg-night/60 p-5 sm:p-6">
                 <h4 className="font-serif text-3xl font-semibold italic text-white">{selected.name}</h4>
-                <p className="mt-2 text-sm font-semibold text-var">{selected.topic}</p>
+                <p className="mt-2 text-sm font-semibold text-var-soft">{selected.topic}</p>
                 <p className="mt-1 text-sm text-slate-400">
                   {selected.court} · <span className="font-mono text-slate-300">{selected.citation}</span>
                 </p>
@@ -198,7 +198,7 @@ export default function Erae() {
             <div className="grid gap-x-6 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
               {norms.map((n) => (
                 <article key={n.id} className="border-t-2 border-slate-700 pt-3">
-                  <p className="font-tv text-base font-bold uppercase tracking-wide text-var">{n.scope}</p>
+                  <p className="font-tv text-base font-bold uppercase tracking-wide text-var-soft">{n.scope}</p>
                   <h4 className="mt-1 font-serif text-xl font-semibold text-white">{n.name}</h4>
                   <p className="mt-2 text-sm leading-relaxed text-slate-300">{n.detail}</p>
                 </article>

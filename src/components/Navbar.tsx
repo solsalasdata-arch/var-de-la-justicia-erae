@@ -47,7 +47,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <a href="#inicio" className="flex items-center gap-2 text-white" onClick={() => setOpen(false)}>
-          <MonitorPlay className="h-5 w-5 text-var" aria-hidden />
+          <MonitorPlay className="h-5 w-5 text-var-soft" aria-hidden />
           <span className="font-serif text-lg font-semibold tracking-tight">
             El VAR de la <span className="text-pitch">Justicia</span>
           </span>
