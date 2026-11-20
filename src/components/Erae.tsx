@@ -6,7 +6,7 @@ import { norms, pillars, precedents } from '../data/erae'
 
 const tone = {
   pitch: { text: 'text-pitch', border: 'border-pitch', soft: 'border-pitch/50 bg-pitch/10', band: 'bg-pitch text-night', solid: 'bg-pitch' },
-  var: { text: 'text-var-soft', border: 'border-var', soft: 'border-var/50 bg-var/10', band: 'bg-var text-white', solid: 'bg-var' },
+  var: { text: 'text-var-soft', border: 'border-var', soft: 'border-var/50 bg-var/10', band: 'bg-var text-night', solid: 'bg-var' },
   alert: { text: 'text-alert-soft', border: 'border-alert', soft: 'border-alert/50 bg-alert/10', band: 'bg-alert text-white', solid: 'bg-alert' },
 }
 
@@ -139,7 +139,7 @@ export default function Erae() {
         </div>
 
         <figure className="mt-12 overflow-hidden rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
-          <figcaption className="font-tv flex items-center gap-2 bg-var px-5 py-2 text-lg font-extrabold uppercase tracking-wide text-white">
+          <figcaption className="font-tv flex items-center gap-2 bg-pitch px-5 py-2 text-lg font-extrabold uppercase tracking-wide text-night">
             <BookOpen className="h-5 w-5" aria-hidden /> Propuesta normativa
           </figcaption>
           <blockquote className="bg-white px-5 py-6 font-serif text-lg leading-relaxed text-night sm:px-8 sm:text-xl">
@@ -171,7 +171,7 @@ export default function Erae() {
                         <span className="block font-serif text-base font-semibold italic text-white">{p.name}</span>
                         <span className="block text-xs text-slate-400">{p.court}</span>
                       </span>
-                      <span className="font-mono shrink-0 rounded-sm bg-var px-2 py-0.5 text-xs font-bold text-white">{p.year}</span>
+                      <span className="font-mono shrink-0 rounded-sm bg-var px-2 py-0.5 text-xs font-bold text-night">{p.year}</span>
                     </button>
                   </li>
                 ))}

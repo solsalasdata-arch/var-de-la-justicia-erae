@@ -40,7 +40,7 @@ const plays: MatchPlay[] = [
 
 const chip: Record<Tone, string> = {
   pitch: 'bg-pitch text-night',
-  var: 'bg-var text-white',
+  var: 'bg-var text-night',
   alert: 'bg-alert text-white',
   slate: 'bg-slate-200 text-night',
 }
@@ -181,7 +181,7 @@ export default function CaseRelato() {
               <div className="flex-1">
                 <p className="text-sm font-semibold text-white">
                   {f.label}{' '}
-                  <span className={`font-tv ml-1 rounded-sm px-1.5 py-0.5 text-xs font-bold uppercase ${f.kind === 'erroneo' ? 'bg-alert text-white' : 'bg-var text-white'}`}>
+                  <span className={`font-tv ml-1 rounded-sm px-1.5 py-0.5 text-xs font-bold uppercase ${f.kind === 'erroneo' ? 'bg-alert text-white' : 'bg-var text-night'}`}>
                     {f.kind === 'erroneo' ? 'Dato erróneo' : 'Variable proxy'}
                   </span>
                 </p>

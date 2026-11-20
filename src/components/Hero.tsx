@@ -3,7 +3,7 @@ import { pillars } from '../data/erae'
 
 const panelTone = {
   pitch: 'bg-pitch text-night',
-  var: 'bg-var text-white',
+  var: 'bg-var text-night',
   alert: 'bg-alert text-white',
 }
 
