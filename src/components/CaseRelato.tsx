@@ -128,14 +128,21 @@ export default function CaseRelato() {
           Durante años corrió por una cancha de tierra con la camiseta de un club de inferiores. No llegó a primera: se
           lesionó, trabajó de repartidor, volvió al barrio. Nunca tuvo una causa penal.
         </p>
-        <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-3">
-          {mateoProfile.map(({ k, v }) => (
-            <div key={k} className="border-t border-slate-800 pt-2">
-              <dt className="text-xs text-slate-400">{k}</dt>
-              <dd className="text-sm font-medium text-slate-100">{v}</dd>
-            </div>
-          ))}
-        </dl>
+        <div className="relative mt-5 rounded-lg bg-white p-5 text-night shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
+          <span className="font-tv absolute -top-3 right-4 rotate-2 rounded-sm border-2 border-alert bg-white px-2 py-0.5 text-xs font-bold uppercase text-alert">
+            Caso hipotético
+          </span>
+          <p className="font-mono text-xs text-slate-600">Expte. N° 0089/26 · Juzgado de Garantías</p>
+          <p className="mt-1 font-semibold">Ministerio Público Fiscal c/ Mateo s/ medidas de coerción</p>
+          <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-3">
+            {mateoProfile.map(({ k, v }) => (
+              <div key={k} className="border-t border-slate-300 pt-2">
+                <dt className="text-xs text-slate-600">{k}</dt>
+                <dd className="text-sm font-medium">{v}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </>
     ),
     score: (
@@ -160,7 +167,10 @@ export default function CaseRelato() {
     ),
     auditoria: (
       <div className="space-y-4">
-        <p>Detrás del 0,89 aparece esto (desglose ilustrativo):</p>
+        <div className="flex items-end gap-4">
+          <p className="font-mono text-6xl font-bold leading-none tabular-nums text-alert-soft">35%</p>
+          <p className="pb-1 text-base leading-snug text-slate-100">del puntaje sale de un registro policial que no es de Mateo.</p>
+        </div>
         <div className="flex h-4 overflow-hidden rounded-full bg-night" aria-hidden>
           {scoreFactors.map((f) => (
             <div
@@ -276,9 +286,13 @@ export default function CaseRelato() {
     resolucion: (
       <div className="space-y-4">
         <p>Minuto noventa y dos. El juez pide un cuarto intermedio. Cuando vuelve, no dice que el algoritmo miente: dice algo más preciso.</p>
-        <div className="rounded-lg bg-pitch p-4 text-night">
+        <div className="relative rounded-lg bg-white p-5 text-night shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
+          <span className="font-tv absolute -top-3 right-4 rotate-2 rounded-sm border-2 border-alert bg-white px-2 py-0.5 text-xs font-bold uppercase text-alert">
+            Caso hipotético
+          </span>
+          <p className="font-mono text-xs text-slate-600">Extracto de la resolución · Audiencia de medidas de coerción</p>
           <p className="font-tv text-lg font-extrabold uppercase tracking-wide">Resuelvo</p>
-          <p className="mt-1 text-lg font-semibold">I. RECHAZAR el pedido de prisión preventiva. Mateo continuará el proceso en libertad.</p>
+          <p className="mt-1 text-lg font-semibold"><mark className="bg-pitch px-1 text-night">I. RECHAZAR el pedido de prisión preventiva.</mark> Mateo continuará el proceso en libertad.</p>
           <p className="mt-1">II. Excluir el informe algorítmico como fundamento de la medida de coerción.</p>
         </div>
         <button
@@ -343,7 +357,7 @@ export default function CaseRelato() {
           chapter="En vivo"
           tone="alert"
           title="Una estadística puede convertirse en una celda"
-          intro="El caso Mateo es hipotético; las dinámicas que lo producen no lo son. La Sala VAR Jurídica, minuto a minuto: el relato avanza solo y podés pausarlo o adelantarlo."
+          intro="Caso hipotético, dinámicas reales. La Sala VAR Jurídica, minuto a minuto: pausalo o adelantalo cuando quieras."
         />
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)]">

@@ -35,7 +35,7 @@ export default function Erae() {
               Estándar de Revisabilidad Algorítmica Efectiva <span className="text-pitch">(ERAE)</span>
             </>
           }
-          intro="El VAR Jurídico: verificación, auditoría y revisión. Tres dimensiones inseparables: la información debe permitir el examen técnico; el examen debe habilitar la contradicción; y la contradicción debe recibir una respuesta judicial fundada."
+          intro="El VAR Jurídico: tres revisiones inseparables antes de que un puntaje pese sobre la libertad de alguien."
         />
 
         <div className="grid gap-5 lg:grid-cols-3">
@@ -137,6 +137,22 @@ export default function Erae() {
             </span>
           </div>
         </div>
+
+        <ol aria-label="Cómo opera el VAR Jurídico" className="mt-12 grid gap-3 sm:grid-cols-5">
+          {[
+            ['Informe IA', 'Entra el puntaje', 'border-alert text-alert-soft'],
+            ['Técnica', '¿Qué mide y con qué error?', 'border-pitch text-pitch'],
+            ['Procesal', '¿La defensa pudo refutarlo?', 'border-pitch text-pitch'],
+            ['Judicial', '¿Hay razones propias?', 'border-pitch text-pitch'],
+            ['Decisión humana', 'Decide el juez, no el modelo', 'border-white text-white'],
+          ].map(([t, d, c], i) => (
+            <li key={t} className={`border-t-4 pt-3 ${c.split(' ')[0]}`}>
+              <p className="font-mono text-xs text-slate-400">0{i + 1}</p>
+              <p className={`font-tv text-xl font-bold uppercase tracking-wide ${c.split(' ')[1]}`}>{t}</p>
+              <p className="text-sm text-slate-300">{d}</p>
+            </li>
+          ))}
+        </ol>
 
         <figure className="mt-12 overflow-hidden rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
           <figcaption className="font-tv flex items-center gap-2 bg-pitch px-5 py-2 text-lg font-extrabold uppercase tracking-wide text-night">

@@ -13,9 +13,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('inicio')
   const [scrolled, setScrolled] = useState(false)
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24)
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0)
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
 
@@ -97,6 +102,9 @@ export default function Navbar() {
           ))}
         </ul>
       )}
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-0.5 bg-transparent">
+        <div className="h-full origin-left bg-pitch" style={{ transform: `scaleX(${progress})` }} />
+      </div>
     </nav>
   )
 }
